@@ -1,6 +1,7 @@
 'use strict';
 
-
+const max = 9999
+const min = 0
 /**
  * obtiene el número de caídas de un usuario en el último mes.
  * obtiene el número de caídas de un usuario en el último mes.
@@ -11,7 +12,7 @@
 exports.getFalls = function(id) {
   return new Promise(function(resolve, reject) {
     var examples = {};
-    examples['application/json'] = 2;
+    examples['application/json'] = Math.floor(Math.random() * (max - min + 1) + min);
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -31,7 +32,7 @@ exports.getFalls = function(id) {
 exports.obtinfoavgspeed = function(id) {
   return new Promise(function(resolve, reject) {
     var examples = {};
-    examples['application/json'] = 2;
+    examples['application/json'] = Math.floor(Math.random() * (max - min + 1) + min);
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -51,7 +52,7 @@ exports.obtinfoavgspeed = function(id) {
 exports.obtinfokms = function(id) {
   return new Promise(function(resolve, reject) {
     var examples = {};
-    examples['application/json'] = 2;
+    examples['application/json'] = Math.floor(Math.random() * (max - min + 1) + min);
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -71,7 +72,7 @@ exports.obtinfokms = function(id) {
 exports.obtinfolocations = function(id) {
   return new Promise(function(resolve, reject) {
     var examples = {};
-    examples['application/json'] = 2;
+    examples['application/json'] = Math.floor(Math.random() * (max - min + 1) + min);
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -91,7 +92,7 @@ exports.obtinfolocations = function(id) {
 exports.obtinfomaxspeed = function(id) {
   return new Promise(function(resolve, reject) {
     var examples = {};
-    examples['application/json'] = 2;
+    examples['application/json'] = Math.floor(Math.random() * (max - min + 1) + min);
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -111,7 +112,7 @@ exports.obtinfomaxspeed = function(id) {
 exports.obtinfoscore = function(id) {
   return new Promise(function(resolve, reject) {
     var examples = {};
-    examples['application/json'] = 2;
+    examples['application/json'] = Math.floor(Math.random() * (max - min + 1) + min);
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -151,7 +152,7 @@ exports.obtinfosos = function(id) {
 exports.obtinfotime = function(id) {
   return new Promise(function(resolve, reject) {
     var examples = {};
-    examples['application/json'] = 2;
+    examples['application/json'] = Math.floor(Math.random() * (max - min + 1) + min);
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
