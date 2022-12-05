@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: Medición iHelemet
+  title: Estadísticas iHelemet
   description: Estadísticas iHelemt
   contact:
     name: Soporte iHelmet
@@ -31,11 +31,9 @@ paths:
         "200":
           description: Random number
           content:
-            text/plain:
+            application/json:
               schema:
-                type: integer
-                example: 2
-                x-content-type: text/plain
+                $ref: '#/components/schemas/Value'
         "404":
           description: Not found response
           content:
@@ -70,11 +68,9 @@ paths:
         "200":
           description: Random number
           content:
-            text/plain:
+            application/json:
               schema:
-                type: integer
-                example: 2
-                x-content-type: text/plain
+                $ref: '#/components/schemas/Value'
         "404":
           description: Not found response
           content:
@@ -107,11 +103,9 @@ paths:
         "200":
           description: Random number
           content:
-            text/plain:
+            application/json:
               schema:
-                type: integer
-                example: 2
-                x-content-type: text/plain
+                $ref: '#/components/schemas/Value'
         "404":
           description: Not found response
           content:
@@ -146,11 +140,9 @@ paths:
         "200":
           description: Random number
           content:
-            text/plain:
+            application/json:
               schema:
-                type: integer
-                example: 2
-                x-content-type: text/plain
+                $ref: '#/components/schemas/Value'
         "404":
           description: Not found response
           content:
@@ -185,11 +177,9 @@ paths:
         "200":
           description: Random number
           content:
-            text/plain:
+            application/json:
               schema:
-                type: integer
-                example: 2
-                x-content-type: text/plain
+                $ref: '#/components/schemas/Value'
         "404":
           description: Not found response
           content:
@@ -222,11 +212,9 @@ paths:
         "200":
           description: Random number
           content:
-            text/plain:
+            application/json:
               schema:
-                type: integer
-                example: 2
-                x-content-type: text/plain
+                $ref: '#/components/schemas/Value'
         "404":
           description: Not found response
           content:
@@ -259,11 +247,9 @@ paths:
         "200":
           description: Random number
           content:
-            text/plain:
+            application/json:
               schema:
-                type: integer
-                example: 2
-                x-content-type: text/plain
+                $ref: '#/components/schemas/Value'
         "404":
           description: Not found response
           content:
@@ -296,11 +282,9 @@ paths:
         "200":
           description: Random number
           content:
-            text/plain:
+            application/json:
               schema:
-                type: integer
-                example: 2
-                x-content-type: text/plain
+                $ref: '#/components/schemas/Value'
         "404":
           description: Not found response
           content:
@@ -312,23 +296,36 @@ paths:
                 x-content-type: text/plain
       x-swagger-router-controller: Global
 components:
-  schemas: {}
+  schemas:
+    Value:
+      type: object
+      properties:
+        value:
+          maximum: 999999
+          minimum: 1
+          type: integer
+      example:
+        value: 10120
+    ValueBool:
+      type: object
+      properties:
+        value:
+          type: boolean
+      example:
+        value: true
   responses:
     successful_random_number:
       description: Random number
       content:
-        text/plain:
+        application/json:
           schema:
-            type: integer
-            example: 2
-            x-content-type: text/plain
+            $ref: '#/components/schemas/Value'
     successful_bool:
       description: Successful response
       content:
-        text/plain:
+        application/json:
           schema:
-            type: boolean
-            example: true
+            $ref: '#/components/schemas/ValueBool'
     "404NotFound":
       description: Not found response
       content:
